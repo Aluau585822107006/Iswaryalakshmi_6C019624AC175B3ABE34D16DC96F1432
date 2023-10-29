@@ -1,22 +1,11 @@
-#leap year
-"""
-year %4==0&
-year %100!=0/
-year %400==0
-
-"""
-
-
-def isleapyear(year);
-if (year %4== 0 and year %100!=0/)oryear %400==0:
-return true
+def fact_rec(n):
+  if n==0 or n==1:
+  return 1
 else:
-return False
+ return n*fact_rec(n-1)
 
 
-year=int(input("enter a year"))
+number=int(input("enter a value"))
+res=fact_rec(number)
 
-if isleapyear(year):
-  print('{}is a leap year.'.format(year))
-else
-  print('{}is not a leap year.'.format(year))
+print ("the factorial of{}is{} ". format(number,res))
